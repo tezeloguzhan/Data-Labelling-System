@@ -20,4 +20,17 @@ public class JSON_Reader {
         return jsonParser.parse(reader);
     }
 
+
+    public static void writeJson(String filename, JSONObject jo) throws Exception {
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        JsonParser jp = new JsonParser();
+        JsonElement je = jp.parse(jo.toJSONString());
+        String prettyJsonString = gson.toJson(je);
+        Files.write(Paths.get(filename), prettyJsonString.getBytes());
+    }
+
+
+
+
+
 }
