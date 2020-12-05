@@ -29,7 +29,11 @@ public class JSON_Reader {
         Files.write(Paths.get(filename), prettyJsonString.getBytes());
     }
 
-
+    public int numberOfUsers(String filename) throws Exception {
+        JSONObject jsonObject = (JSONObject) readJson(filename);
+        JSONArray users = (JSONArray) jsonObject.get("users");
+        return users.size();
+    }
 
 
 
