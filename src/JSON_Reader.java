@@ -20,6 +20,17 @@ public class JSON_Reader {
         this.add(jo);
     }
 
+    public void update(Object key, Object value) {
+        JSONObject jo = new JSONObject();
+        jo.put(key, value);
+
+        if (this.contains(jo)) {
+            this.add(jo);
+        } else {
+            throw new Error("key not found!");
+        }
+    }
+
     public static Object readJson(String filename) throws Exception {
         FileReader reader = new FileReader(filename);
         JSONParser jsonParser = new JSONParser();
