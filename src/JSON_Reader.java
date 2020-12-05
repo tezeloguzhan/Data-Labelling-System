@@ -14,6 +14,12 @@ import com.google.gson.JsonParser;
 
 public class JSON_Reader {
 
+    public void store(Object key, Object value) {
+        JSONObject jo = new JSONObject();
+        jo.put(key, value);
+        this.add(jo);
+    }
+
     public static Object readJson(String filename) throws Exception {
         FileReader reader = new FileReader(filename);
         JSONParser jsonParser = new JSONParser();
