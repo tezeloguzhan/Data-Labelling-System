@@ -35,6 +35,13 @@ public class JSON_Reader {
         return users.size();
     }
 
+    public static JSONObject createSingleUserClassAssignment(String key1, Object value1, String key2, Object value2) {
+        JSONObject singleUserClassAssignment = new JSONObject();
+        singleUserClassAssignment.put(key1, value1);
+        singleUserClassAssignment.put(key2, value2);
+        return singleUserClassAssignment;
+    }
+
 
 
 }
