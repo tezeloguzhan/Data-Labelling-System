@@ -12,8 +12,14 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 
-public class JSON_Reader {
+public class JSON_Reader extends JSONArray {
 
+    String availibilityStatus;
+
+    public JSON_Reader(String availibilityStatus) {
+        super();
+        this.availibilityStatus = availibilityStatus;
+    }
     public void store(Object key, Object value) {
         JSONObject jo = new JSONObject();
         jo.put(key, value);
