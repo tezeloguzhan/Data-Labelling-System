@@ -42,6 +42,14 @@ public class JSON_Reader extends JSONArray {
         this.remove(jo);
     }
 
+    public void display() {
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        JsonParser jp = new JsonParser();
+        JsonElement je = jp.parse(this.toJSONString());
+        String prettyJsonString = gson.toJson(je);
+        System.out.println(prettyJsonString);
+    }
+
     public static Object readJson(String filename) throws Exception {
         FileReader reader = new FileReader(filename);
         JSONParser jsonParser = new JSONParser();
