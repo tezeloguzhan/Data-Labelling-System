@@ -36,6 +36,11 @@ public class JSON_Reader extends JSONArray {
             throw new Error("key not found!");
         }
     }
+    public void delete(Object key, Object value) {
+        JSONObject jo = new JSONObject();
+        jo.put(key, value);
+        this.remove(jo);
+    }
 
     public static Object readJson(String filename) throws Exception {
         FileReader reader = new FileReader(filename);
