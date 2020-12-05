@@ -5,7 +5,7 @@ import org.json.simple.*;
 
 public class Main {
 
-    @SuppressWarnings("unchecked")
+
     public static void main(String[] args) throws Exception {
         String filename = "users.json";
         JSONObject jsonObject = (JSONObject) JSON.readJson(filename);
