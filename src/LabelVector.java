@@ -1,12 +1,8 @@
-public class LabelVector {
+import org.json.simple.JSONArray;
 
-    String name;
-    LabelDefinition[] labelDefinitions;
+public class LabelVector extends JSONArray {
 
-    public LabelVector(String name, LabelDefinition[] labelDefinitions) {
+    public LabelVector() {
         super();
-        this.name = name;
-        this.labelDefinitions = labelDefinitions;
     }
-
 }
