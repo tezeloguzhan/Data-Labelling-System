@@ -1,0 +1,7 @@
+{
+    "Users":[
+        {"user id":1,"user name":"RandomLabelingMechanism1","user type":"RandomBot", "consistencyCheckProbability": 0.1},
+        {"user id":2,"user name":"RandomLabelingMechanism2","user type":"RandomBot", "consistencyCheckProbability": 0.1},
+        {"user id":3,"user name":"MachineLearningLabelingMechanism","user type":"MachineLearningBot", "consistencyCheckProbability": 0.1}
+    ]
+}
