@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class RandomLabeler extends DataLabeler{
 
 
-    public RandomLabeler(DataSet datasetInstance, User[] user) {
+    public RandomLabeler(DataSet datasetInstance, com.company.User[] user) {
         super(datasetInstance, user);
     }
 
@@ -21,7 +21,7 @@ public class RandomLabeler extends DataLabeler{
         Scanner scan = new Scanner(System.in);
         System.out.println("Select User using the shown ID: ");
         int userID = scan.nextInt();
-        User currUser = new User();
+        com.company.User currUser = new com.company.User();
         for(int i=0; i<this.user.length; i++){
             if(user[i].getId() == userID){
                 currUser = user[i];
@@ -35,7 +35,7 @@ public class RandomLabeler extends DataLabeler{
             int rnd = new Random().nextInt(labelList.length);
             ClassLabel cl;
             cl = labelList[rnd];
-            User user = currUser;
+            com.company.User user = currUser;
             DataLabel dataLabel = new DataLabel(dataInst, user);
             dataLabel.addClassLabel(cl);
             this.dataLabelList[i] = dataLabel;
