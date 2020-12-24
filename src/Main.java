@@ -10,7 +10,7 @@ public class Main {
         String filename = "Users.json";
         JSONObject jsonObject = (JSONObject) JSON.readJson(filename);
         JSONArray users = (JSONArray) jsonObject.get("users");
-        filename = "label dataset.json";
+        filename = "LabelingProject_Input-1.json";
         jsonObject = (JSONObject) JSON.readJson(filename);
         jsonObject.put("users", users.clone());
         ArrayList<User> userList = new ArrayList<User>();
