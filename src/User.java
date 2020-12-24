@@ -1,27 +1,58 @@
+package com.company;
+
+import org.json.simple.JSONObject;
+
 public class User {
-    Long id;
-    String name;
-    String type;
-    String target;
-    String value;
+    private int id;
+    private String userName;
+    private String userType;
+    private double consistencyCheckProbability;
 
-    public User(Long id, String name, String type) {
+    public User(){}
+    public User(int id, String userName, String userType, double consistencyCheckProbability) {
         this.id = id;
-        this.name = name;
-        this.type = type;
+        this.userName = userName;
+        this.userType = userType;
+        this.consistencyCheckProbability = consistencyCheckProbability;
     }
 
-    public Long getId() {
-        return this.id;
+    public double getConsistencyCheckProbability() {
+        return consistencyCheckProbability;
     }
 
-    public User(String target, String value) {
-        super();
-        this.target = target;
-        this.value = value;
+    public void setConsistencyCheckProbability(double consistencyCheckProbability) {
+        this.consistencyCheckProbability = consistencyCheckProbability;
     }
 
-    public void labelInstance() {
+    public int getId() {
+        return id;
+    }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getUserType() {
+        return userType;
+    }
+
+    public void setUserType(String userType) {
+        this.userType = userType;
+    }
+
+    public JSONObject getJsonObject(){
+        JSONObject jsonObj = new JSONObject();
+        jsonObj.put("user id", this.id);
+        jsonObj.put("user name", this.userName);
+        jsonObj.put("user type", this.userType);
+        return jsonObj;
     }
 }
