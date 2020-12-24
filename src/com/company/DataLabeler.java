@@ -8,7 +8,7 @@ public abstract class DataLabeler {
     protected User user[];
     protected DataLabel dataLabelList[];
 
-    public DataLabeler(DataSet datasetInstance, User[] user) {
+    public DataLabeler(com.company.DataSet datasetInstance, com.company.User[] user) {
         this.datasetInstance = datasetInstance;
         this.user = user;
         this.dataLabelList = new DataLabel[datasetInstance.getInstance().length];
