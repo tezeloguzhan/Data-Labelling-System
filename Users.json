@@ -1,7 +1,8 @@
 {
     "Users":[
-        {"user id":1,"user name":"RandomLabelingMechanism1","user type":"RandomBot", "consistencyCheckProbability": 0.1},
-        {"user id":2,"user name":"RandomLabelingMechanism2","user type":"RandomBot", "consistencyCheckProbability": 0.1},
-        {"user id":3,"user name":"MachineLearningLabelingMechanism","user type":"MachineLearningBot", "consistencyCheckProbability": 0.1}
+        {"user id":1,"user name":"RandomLabelingMechanism1","password": "123" ,"user type":"RandomBot", "consistencyCheckProbability": 0.1},
+        {"user id":2,"user name":"RandomLabelingMechanism2","password": "123", "user type":"RandomBot", "consistencyCheckProbability": 0.1},
+        {"user id":3,"user name":"MachineLearningLabelingMechanism","password": "123", "user type":"MachineLearningBot", "consistencyCheckProbability": 0.1},
+        {"user id":4,"user name":"testUser","password": "123", "user type":"Human User", "consistencyCheckProbability": 0.1}
     ]
 }
