@@ -5,10 +5,10 @@ import org.json.simple.JSONObject;
 
 public abstract class DataLabeler {
     protected DataSet datasetInstance;
-    protected User user[];
+    protected User user;
     protected DataLabel dataLabelList[];
 
-    public DataLabeler(com.company.DataSet datasetInstance, com.company.User[] user) {
+    public DataLabeler(DataSet datasetInstance, User user) {
         this.datasetInstance = datasetInstance;
         this.user = user;
         this.dataLabelList = new DataLabel[datasetInstance.getInstance().length];
@@ -23,11 +23,12 @@ public abstract class DataLabeler {
         this.datasetInstance = datasetInstance;
     }
 
-    public User[] getUser() {
+
+    public User getUser() {
         return user;
     }
 
-    public void setUser(User[] user) {
+    public void setUser(User user) {
         this.user = user;
     }
 
@@ -43,9 +44,8 @@ public abstract class DataLabeler {
         }
         jsonObj.put("class label assignment", jsonArray);
         JSONArray userArray = new JSONArray();
-        for(int i=0; i<this.user.length; i++){
-            userArray.add(this.user[i].getJsonObject());
-        }
+
+        userArray.add(this.user.getJsonObject());
         jsonObj.put("users", userArray);
 
         return jsonObj;
