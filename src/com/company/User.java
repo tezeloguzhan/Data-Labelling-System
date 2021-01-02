@@ -7,13 +7,24 @@ public class User {
     private String userName;
     private String userType;
     private double consistencyCheckProbability;
+    private String password;
 
     public User(){}
-    public User(int id, String userName, String userType, double consistencyCheckProbability) {
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public User(int id, String userName, String userPassowrd , String userType , double consistencyCheckProbability) {
         this.id = id;
         this.userName = userName;
         this.userType = userType;
         this.consistencyCheckProbability = consistencyCheckProbability;
+        this.password = userPassowrd;
     }
 
     public double getConsistencyCheckProbability() {
@@ -42,6 +53,17 @@ public class User {
 
     public String getUserType() {
         return userType;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", userName='" + userName + '\'' +
+                ", userType='" + userType + '\'' +
+                ", consistencyCheckProbability=" + consistencyCheckProbability +
+                ", password='" + password + '\'' +
+                '}';
     }
 
     public void setUserType(String userType) {
