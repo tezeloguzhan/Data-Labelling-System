@@ -13,11 +13,13 @@ public class Main {
         DataLabelingSystem labelerSystem = new DataLabelingSystem();
         labelerSystem.createDataset(currPath + "\\LabelingProject_Input-1.json");
         labelerSystem.createUser(currPath + "\\Users.json");
+        UserFunction userFunction = new UserFunction(labelerSystem.getUsers());
+        User currUser = userFunction.userLogin();
+        labelerSystem.setCurrUser(currUser);
         labelerSystem.createLabel();
-        labelerSystem.terminalOutput();
-        labelerSystem.saveToJson(currPath + "\\Labeled_Data_Output.json");       //output path
-        labelerSystem.ReportOutput(currPath + "\\Report_Output.json");       //output path
-
-
+        ReportGenerator reportGenerator = new ReportGenerator();
+        reportGenerator.terminalOutput(labelerSystem.getDataLabeler());
+        reportGenerator.saveToJson(currPath + "\\Labeled_Data_Output.json", labelerSystem.getDataSet(), labelerSystem.getDataLabeler());       //output path
+        reportGenerator.ReportOutput(currPath + "\\Report_Output.json", labelerSystem.getDataLabeler(), labelerSystem.getDataSet());       //output path
     }
 }
