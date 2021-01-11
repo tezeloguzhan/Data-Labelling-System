@@ -1,0 +1,21 @@
+{
+    "wordList":[
+        {
+            "word": "mutlu",
+            "classification": "Positive"
+        },
+        {
+            "word": "üzgün",
+            "classification": "Negative"
+        },
+        {
+            "word": "üzgün",
+            "classification": "Negative"
+        },
+        {
+            "word": "iyi",
+            "classification": "Positive"
+        }
+
+    ]
+}
